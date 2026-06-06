@@ -605,7 +605,7 @@ $ED_NL
    NL%SLCOL_DATABASE    = '/mypath/soil_data/colour/LC2007JGRB/LC2007JGRB_'
    NL%LU_DATABASE	    = ''
    NL%PLANTATION_FILE   = ''
-   NL%THSUMS_DATABASE   = 'common/ed_inputs/'
+   NL%THSUMS_DATABASE   = 'Templates/edts_datasets/ed_inputs/'
    NL%ED_MET_DRIVER_DB  = 'tonzi/met/ED_MET_DRIVER_HEADER'
    NL%OBSTIME_DB        = 'tonzi/Tonzi.lat38.432lon-120.966.time'
    NL%SOILSTATE_DB      = ''
@@ -1633,4 +1633,3 @@ $ED_NL
 $END
 !==========================================================================================!
 !==========================================================================================!
-
