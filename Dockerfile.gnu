@@ -23,9 +23,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 # copy the source only, this prevents a full rebuild in case of changes to Dockerfile or non source files
-COPY BRAMS    /ED2/BRAMS
 COPY ED       /ED2/ED
-COPY EDR      /ED2/EDR
 COPY RAPP     /ED2/RAPP
 COPY Ramspost /ED2/Ramspost
 

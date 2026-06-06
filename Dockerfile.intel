@@ -23,9 +23,7 @@ RUN wget -q https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.10/hdf5-1.10.9
     rm -rf CMake-hdf5-1.10.9.tar.gz CMake-hdf5-1.10.9
 
 # copy the source only, this prevents a full rebuild in case of changes to Dockerfile or non source files
-COPY BRAMS    /ED2/BRAMS
 COPY ED       /ED2/ED
-COPY EDR      /ED2/EDR
 COPY RAPP     /ED2/RAPP
 COPY Ramspost /ED2/Ramspost
 
