@@ -309,8 +309,8 @@ $ED_NL
    ! SFILOUT -- Path and prefix for history files.                                         !
    !---------------------------------------------------------------------------------------!
 
-   NL%FFILOUT = '../../scratch/fla/outputs/fla-smoke/analysis'
-   NL%SFILOUT = '../../scratch/fla/outputs/fla-smoke/history'
+   NL%FFILOUT = '../../scratch/fla/outputs/fla/analysis'
+   NL%SFILOUT = '../../scratch/fla/outputs/fla/history'
 
    !---------------------------------------------------------------------------------------!
 

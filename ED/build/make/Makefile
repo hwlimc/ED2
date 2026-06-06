@@ -90,7 +90,7 @@ endif
 
 
 #----- Set parallel flag based on the settings. -------------------------------------------#
-ifeq ($(F_COMP),$(filter $(F_COMP), mpif90 mpifortran))
+ifeq ($(F_COMP),$(filter $(F_COMP), mpif90 mpif90.openmpi mpifortran mpiifort mpiifx))
    PAR_DEFS=-DRAMS_MPI
 else ifdef $(PAR_LIBS)
    PAR_DEFS=-DRAMS_MPI
