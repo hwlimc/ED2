@@ -180,13 +180,28 @@ ED/build/make/include.mk.*
 !ED/build/make/include.mk.pgi
 !ED/build/make/include.mk.travisci
 
-# FLAKALIDEN project data and scratch outputs are kept outside the Git payload.
-projects/
+# Project data and scratch outputs are kept outside the Git payload.
+
+# Containers
+*.sif
+
+# Data
+projects/*/data/
+
+# Runtime
+projects/*/runs/
+
+# Logs
+projects/*/logs/
+
+# Outputs
+projects/*/outputs/
+
+# Scratch
 scratch/
 *.sif
 *.tar
-*.img
-_pycache_/
+
 .apptainer/
 
 

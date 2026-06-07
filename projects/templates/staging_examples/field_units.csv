@@ -1,0 +1,47 @@
+template,column,unit,description
+domain.csv,run_name,text,Short simulation name used in ED2 fragments.
+domain.csv,mode,region|poi,Human-readable mode label; builder uses n_ed_region and n_poi.
+domain.csv,"start_time,end_time",UTC ISO-8601,Simulation start and end times.
+domain.csv,grid_type,integer,0 lon/lat grid; 1 polar stereographic.
+domain.csv,"grid_res,poi_res",degree,Grid or POI resolution for lon/lat runs.
+domain.csv,"lat_min,lat_max,lon_min,lon_max,poi_lat,poi_lon",degree,WGS84 coordinates.
+met.csv,time,UTC ISO-8601,Meteorology timestamp.
+met.csv,"lon,lat",degree,WGS84 grid-cell coordinate.
+met.csv,hgt,m,Meteorological reference height.
+met.csv,tmp,K,Air temperature.
+met.csv,pres,Pa,Air pressure.
+met.csv,sh,kg/kg,Specific humidity.
+met.csv,"ugrd,vgrd",m/s,Zonal and meridional wind.
+met.csv,prate,kg/m2/s,Precipitation rate.
+met.csv,"dlwrf,nbdsf,nddsf,vbdsf,vddsf",W/m2,Downwelling longwave and split shortwave radiation.
+soil_constants.csv,"nzg,nzs",count,Soil and snow/water layer counts.
+soil_constants.csv,"isoilflg,islcolflg,nslcon,isoilcol",integer code,ED2 soil texture/colour mode and classes.
+soil_constants.csv,"slxclay,slxsand,slsoc",fraction 0-1,"Clay, sand, and soil organic carbon mass fraction."
+soil_constants.csv,slph,pH,Soil pH.
+soil_constants.csv,slcec,mol/kg,Cation exchange capacity.
+soil_constants.csv,sldbd,kg/m3,Dry bulk density.
+soil_constants.csv,slz,m,"Negative soil-layer bottom depths, deepest to shallowest."
+soil_constants.csv,slmstr,index,"Initial soil moisture index: 0 wilting, 1 field capacity, 2 saturation."
+soil_constants.csv,stgoff,K,Initial soil temperature offset from air temperature.
+thermal_sums_chd.csv,jan..dec,day or model thermal-sum unit,Monthly chilling-degree state used by ED cold-deciduous phenology.
+thermal_sums_dgd.csv,jan..dec,day or model thermal-sum unit,Monthly growing-degree state used by ED cold-deciduous phenology.
+plantation_fraction.csv,fracplant,fraction 0-1,Forest plantation fraction at lon/lat.
+phenology_prescribed.csv,"flush_a,flush_b,color_a,color_b",ED phenology parameter,Prescribed phenology curve parameters read by ED.
+ed22_sites.csv,area,fraction,Fractional site area inside polygon; builder normalises during ED initialisation.
+ed22_sites.csv,depth,m,Site soil depth.
+ed22_sites.csv,"nscol,ntext",integer code,Soil colour and texture class.
+ed22_sites.csv,"sand,clay,slsoc",fraction 0-1,Site-level soil fractions.
+ed22_sites.csv,elevation,m,Site elevation.
+ed22_sites.csv,slope,degree,Terrain slope.
+ed22_sites.csv,aspect,degree,Terrain aspect.
+ed22_sites.csv,tci,index,Topographic convergence index.
+ed22_patches.csv,area,fraction,Patch fractional area in site.
+ed22_patches.csv,age,year,Patch age.
+ed22_patches.csv,"fgc,fsc,stgc,stgl,stsc,stsl,msc,ssc,psc",kgC/m2,Patch carbon pools used by ED initialisation.
+ed22_patches.csv,"fsn,msn",kgN/m2,Patch nitrogen pools.
+ed22_cohorts.csv,dbh,cm,Diameter at breast height.
+ed22_cohorts.csv,height,m,Cohort height.
+ed22_cohorts.csv,pft,integer code,ED plant functional type.
+ed22_cohorts.csv,nplant,plants/m2,Cohort plant density.
+ed22_cohorts.csv,"bdead,balive",kgC/plant,"Dead and live biomass pools, optional initial values."
+observations.csv,"value,unit",as supplied,Observation value and its unit for later model-data comparison.

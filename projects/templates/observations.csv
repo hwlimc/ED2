@@ -1,0 +1,2 @@
+time,lon,lat,variable,value,unit,source
+2011-01-01T00:00:00Z,19.42,64.09,nee,-1.2,umolCO2/m2/s,example

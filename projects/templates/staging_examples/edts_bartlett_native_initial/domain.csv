@@ -1,0 +1,2 @@
+run_name,mode,start_time,end_time,grid_type,n_ed_region,grid_res,lat_min,lat_max,lon_min,lon_max,n_poi,poi_lat,poi_lon,poi_res,met_prefix
+bartlett_native_initial,poi,2002-06-01T12:00:00Z,2003-06-01T00:00:00Z,0,0,1.0,44.5,44.5,-71.5,-71.5,1,44.5,-71.5,1.0,BARTLETT_EXAMPLE_MET_

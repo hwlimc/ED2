@@ -1,0 +1,2 @@
+run_name,mode,start_time,end_time,grid_type,n_ed_region,grid_res,lat_min,lat_max,lon_min,lon_max,n_poi,poi_lat,poi_lon,poi_res,met_prefix
+fla_example,region,2011-01-01T00:00:00Z,2016-01-01T00:00:00Z,0,1,0.10,63.94,64.34,19.37,19.67,0,64.09,19.42,1.00,FLA_MET_
