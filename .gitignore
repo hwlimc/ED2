@@ -186,7 +186,7 @@ ED/build/make/include.mk.*
 *.sif
 
 # Data
-projects/*/data/
+# projects/*/data/
 
 # Runtime
 projects/*/runs/
