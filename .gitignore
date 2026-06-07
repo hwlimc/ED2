@@ -151,6 +151,7 @@ ED/m61build
 .*
 !.github/
 !.gitignore
+!.dockerignore
 !.travis.yml
 !.gitattributes
 ED/build/csspss/*
@@ -180,5 +181,13 @@ ED/build/make/include.mk.*
 !ED/build/make/include.mk.travisci
 
 # FLAKALIDEN project data and scratch outputs are kept outside the Git payload.
-projects/data/**
-scratch/fla/**
+projects/
+scratch/
+*.sif
+*.tar
+*.img
+_pycache_/
+.apptainer/
+
+
+

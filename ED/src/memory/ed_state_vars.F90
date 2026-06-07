@@ -12961,13 +12961,13 @@ module ed_state_vars
                do nm=2,nnodetot
                   uniqueid = ((igr-1)*maxmach)+nm
                   call MPI_Recv(gdpy(nm,igr),1,MPI_INTEGER,machs(nm)                       &
-                               ,500000+uniqueid,MPI_COMM_WORLD,status,ierr)
+                               ,100000+uniqueid,MPI_COMM_WORLD,status,ierr)
                   call MPI_Recv(gdsi(nm,igr),1,MPI_INTEGER,machs(nm)                       &
-                               ,600000+uniqueid,MPI_COMM_WORLD,status,ierr)
+                               ,140000+uniqueid,MPI_COMM_WORLD,status,ierr)
                   call MPI_Recv(gdpa(nm,igr),1,MPI_INTEGER,machs(nm)                       &
-                               ,700000+uniqueid,MPI_COMM_WORLD,status,ierr)
+                               ,180000+uniqueid,MPI_COMM_WORLD,status,ierr)
                   call MPI_Recv(gdco(nm,igr),1,MPI_INTEGER,machs(nm)                       &
-                               ,800000+uniqueid,MPI_COMM_WORLD,status,ierr)
+                               ,220000+uniqueid,MPI_COMM_WORLD,status,ierr)
                end do
                !---------------------------------------------------------------------------!
 
@@ -12977,13 +12977,13 @@ module ed_state_vars
                do nm=2,nnodetot
                   uniqueid=((igr-1)*maxmach)+nm
                   call MPI_Send(gdpy,maxmach*maxgrds,MPI_INTEGER,machs(nm)                 &
-                               , 900000+uniqueid,MPI_COMM_WORLD,ierr)
+                               , 260000+uniqueid,MPI_COMM_WORLD,ierr)
                   call MPI_Send(gdsi,maxmach*maxgrds,MPI_INTEGER,machs(nm)                 &
-                               ,1000000+uniqueid,MPI_COMM_WORLD,ierr)
+                               ,300000+uniqueid,MPI_COMM_WORLD,ierr)
                   call MPI_Send(gdpa,maxmach*maxgrds,MPI_INTEGER,machs(nm)                 &
-                               ,1100000+uniqueid,MPI_COMM_WORLD,ierr)
+                               ,340000+uniqueid,MPI_COMM_WORLD,ierr)
                   call MPI_Send(gdco,maxmach*maxgrds,MPI_INTEGER,machs(nm)                 &
-                               ,1200000+uniqueid,MPI_COMM_WORLD,ierr)
+                               ,380000+uniqueid,MPI_COMM_WORLD,ierr)
                end do
                !---------------------------------------------------------------------------!
 #endif
@@ -12997,13 +12997,13 @@ module ed_state_vars
                uniqueid=((igr-1)*maxmach)+mynum
                !----- Send the information to node (1). -----------------------------------!
                call MPI_Send(cgrid%npolygons_global, 1,MPI_INTEGER,machs(1)                &
-                            ,500000+uniqueid,MPI_COMM_WORLD,ierr)
+                            ,100000+uniqueid,MPI_COMM_WORLD,ierr)
                call MPI_Send(cgrid%nsites_global   , 1,MPI_INTEGER,machs(1)                &
-                            ,600000+uniqueid,MPI_COMM_WORLD,ierr)
+                            ,140000+uniqueid,MPI_COMM_WORLD,ierr)
                call MPI_Send(cgrid%npatches_global , 1,MPI_INTEGER,machs(1)                &
-                            ,700000+uniqueid,MPI_COMM_WORLD,ierr)
+                            ,180000+uniqueid,MPI_COMM_WORLD,ierr)
                call MPI_Send(cgrid%ncohorts_global , 1,MPI_INTEGER,machs(1)                &
-                            ,800000+uniqueid,MPI_COMM_WORLD,ierr)
+                            ,220000+uniqueid,MPI_COMM_WORLD,ierr)
 
                !---------------------------------------------------------------------------!
                !     When this node is finished, send the blocking MPI_Send to the next    !
@@ -13017,13 +13017,13 @@ module ed_state_vars
                !------ Receive the data from the main node. -------------------------------!
                uniqueid=((igr-1)*maxmach)+mynum
                call MPI_Recv(gdpy,maxmach*maxgrds,MPI_INTEGER,machs(1)                     &
-                            , 900000+uniqueid,MPI_COMM_WORLD,status,ierr)
+                            , 260000+uniqueid,MPI_COMM_WORLD,status,ierr)
                call MPI_Recv(gdsi,maxmach*maxgrds,MPI_INTEGER,machs(1)                     &
-                            ,1000000+uniqueid,MPI_COMM_WORLD,status,ierr)
+                            ,300000+uniqueid,MPI_COMM_WORLD,status,ierr)
                call MPI_Recv(gdpa,maxmach*maxgrds,MPI_INTEGER,machs(1)                     &
-                            ,1100000+uniqueid,MPI_COMM_WORLD,status,ierr)
+                            ,340000+uniqueid,MPI_COMM_WORLD,status,ierr)
                call MPI_Recv(gdco,maxmach*maxgrds,MPI_INTEGER,machs(1)                     &
-                            ,1200000+uniqueid,MPI_COMM_WORLD,status,ierr)
+                            ,380000+uniqueid,MPI_COMM_WORLD,status,ierr)
                !---------------------------------------------------------------------------!
 #else
                continue

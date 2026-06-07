@@ -1,0 +1,16 @@
+.git
+.github
+.agents
+.codex
+
+scratch
+projects
+Fla
+
+*.sif
+*.log
+
+ED/build/bin-*
+ED/build/ed_*
+ED/build/*.a
+ED/build/ed2

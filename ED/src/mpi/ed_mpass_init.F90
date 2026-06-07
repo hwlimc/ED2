@@ -1067,7 +1067,7 @@ subroutine ed_masterput_worklist_info(par_run)
 
 
             !----- Set a unique identifier for these packages. ----------------------------!
-            mpiid = 1300000 + maxmach*(ifm-1)*(10+5*maxsite) + nm
+            mpiid = 20000
 
             rscratch(1:npoly) = work_v(ifm)%glon(ipya:ipyz)
             call MPI_Send(rscratch,npoly,MPI_REAL,machnum(nm),mpiid,MPI_COMM_WORLD,ierr)
@@ -1972,7 +1972,7 @@ subroutine ed_nodeget_worklist_info
       call ed_alloc_work_vec(work_v(ifm),npolygons,maxsite)
 
 #if defined(RAMS_MPI)
-      mpiid=1300000 + maxmach*(ifm-1)*(10+5*maxsite)+mynum
+      mpiid=20000
 
       !------ Grab the information. -------------------------------------------------------!
       call MPI_Recv(work_v(ifm)%glon,npolygons,MPI_REAL,master_num,mpiid,MPI_COMM_WORLD    &

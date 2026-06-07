@@ -81,8 +81,8 @@ $ED_NL
    !                0.  Longitude/latitude grid                                            !
    !                1.  Polar-stereographic                                                !
    !---------------------------------------------------------------------------------------!
-   NL%N_ED_REGION   =  0
-   NL%GRID_TYPE     =  1
+   NL%N_ED_REGION   =  1
+   NL%GRID_TYPE     =  0
 
       !------------------------------------------------------------------------------------!
       !     The following variables are used only when GRID_TYPE is set to 0.  You must    !
@@ -95,11 +95,11 @@ $ED_NL
       ! ED_REG_LONMIN  -- Westernmost point of each region.                                !
       ! ED_REG_LONMAX  -- Easternmost point of each region.                                !
       !------------------------------------------------------------------------------------!
-      NL%GRID_RES       =    1.0
-      NL%ED_REG_LATMIN  =  -12.0, -7.5, 10.0,  -6.0
-      NL%ED_REG_LATMAX  =    1.0, -3.5, 15.0,  -1.0
-      NL%ED_REG_LONMIN  =  -66.0,-58.5, 70.0, -63.0
-      NL%ED_REG_LONMAX  =  -49.0,-54.5, 35.0, -53.0
+      NL%GRID_RES       =    0.10
+      NL%ED_REG_LATMIN  =   63.94
+      NL%ED_REG_LATMAX  =   64.34
+      NL%ED_REG_LONMIN  =   19.37
+      NL%ED_REG_LONMAX  =   19.67
       !------------------------------------------------------------------------------------!
 
 
@@ -144,8 +144,8 @@ $ED_NL
       !             be always the same as NSTRATX when GRID_TYPE = 0, and this is also     !
       !             strongly recommended for when GRID_TYPE = 1.                           !
       !------------------------------------------------------------------------------------!
-      NL%NSTRATX = 1,4
-      NL%NSTRATY = 1,4
+      NL%NSTRATX = 1
+      NL%NSTRATY = 1
       !------------------------------------------------------------------------------------!
    !---------------------------------------------------------------------------------------!
 
@@ -162,7 +162,7 @@ $ED_NL
    ! POI_RES -- grid resolution of each POI (degrees).  This is used only to define the    !
    !            soil types                                                                 !
    !---------------------------------------------------------------------------------------!
-    NL%N_POI    =    1
+    NL%N_POI    =    0
     NL%POI_LAT  =  64.09
     NL%POI_LON  =  19.42
     NL%POI_RES  = 1.00   
@@ -309,8 +309,8 @@ $ED_NL
    ! SFILOUT -- Path and prefix for history files.                                         !
    !---------------------------------------------------------------------------------------!
 
-   NL%FFILOUT = '../../scratch/fla/outputs/fla/analysis'
-   NL%SFILOUT = '../../scratch/fla/outputs/fla/history'
+   NL%FFILOUT = '../../scratch/fla/outputs/fla-regional/analysis'
+   NL%SFILOUT = '../../scratch/fla/outputs/fla-regional/history'
 
    !---------------------------------------------------------------------------------------!
 
@@ -1342,9 +1342,10 @@ $ED_NL
    ! 7 - southern pines                   | 17 - "Araucaria" (non-optimised                !
    ! 8 - late conifers                    |      Southern Pines).                          !
    !---------------------------------------------------------------------------------------!
-   ! Boreal spruce stand: use the late-conifer slot, which is the closest Norway spruce
-   ! analogue in this ED2 PFT set.
-   NL%INCLUDE_THESE_PFT = 8
+   ! Regional fla species analogues in the standard ED2 PFT set.
+   ! 6 = Scots pine analogue; 8 = Norway spruce and Larix analogue; 9 = Betula pendula analogue.
+   ! With IED_INIT_MODE=0, ED2 seeds every included PFT into every regional polygon.
+   NL%INCLUDE_THESE_PFT = 6,8,9
    NL%AGRI_STOCK        = 5
    NL%PLANTATION_STOCK  = 8
    NL%PASTURE_STOCK     = 5
