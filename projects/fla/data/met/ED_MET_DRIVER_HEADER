@@ -1,6 +1,6 @@
 # ED meteorology header for BORSOU_MET_ files
 1
-../../projects/data/fla/met/BORSOU_MET_
+../data/met/BORSOU_MET_
 1 1 1.0 1.0 19.42 64.09
 0
 14

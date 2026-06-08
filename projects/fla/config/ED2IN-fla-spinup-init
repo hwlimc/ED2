@@ -309,8 +309,8 @@ $ED_NL
    ! SFILOUT -- Path and prefix for history files.                                         !
    !---------------------------------------------------------------------------------------!
 
-   NL%FFILOUT = '../../scratch/fla/spinup/analysis'
-   NL%SFILOUT = '../../scratch/fla/spinup/history'
+   NL%FFILOUT = '../runs/spinup/analysis'
+   NL%SFILOUT = '../runs/spinup/history'
 
    !---------------------------------------------------------------------------------------!
 
@@ -600,13 +600,13 @@ $ED_NL
    !                      soil temperature and moisture.                                   !
    !  SOILDEPTH_DB     -- Dataset in case you want to read in soil depth information.      !
    !---------------------------------------------------------------------------------------!
-   NL%VEG_DATABASE      = '../../projects/data/fla/veg_oge/OGE2_'
+   NL%VEG_DATABASE      = '../data/inputs/veg_oge/OGE2_'
    NL%SOIL_DATABASE     = ''
    NL%SLCOL_DATABASE    = '/mypath/soil_data/colour/LC2007JGRB/LC2007JGRB_'
    NL%LU_DATABASE	    = ''
    NL%PLANTATION_FILE   = ''
-   NL%THSUMS_DATABASE   = '../../projects/data/fla/ed_inputs/'
-   NL%ED_MET_DRIVER_DB  = '../../projects/data/fla/met/ED_MET_DRIVER_HEADER'
+   NL%THSUMS_DATABASE   = '../data/inputs/'
+   NL%ED_MET_DRIVER_DB  = '../data/met/ED_MET_DRIVER_HEADER'
    NL%OBSTIME_DB        = ''
    NL%SOILSTATE_DB      = ''
    NL%SOILDEPTH_DB      = ''
@@ -1520,7 +1520,7 @@ $ED_NL
    NL%IPHENYSF = 2016
    NL%IPHENYF1 = 2001
    NL%IPHENYFF = 2016
-   ! NL%PHENPATH   = '../../projects/data/fla/phenology/phenology_'
+   ! NL%PHENPATH   = '../data/inputs/phenology/phenology_'
    NL%PHENPATH   = ''
    !---------------------------------------------------------------------------------------!
 

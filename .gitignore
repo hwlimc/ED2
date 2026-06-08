@@ -192,6 +192,7 @@ projects/*/data/met/
 projects/*/runs/
 
 # Logs
+*.log
 projects/*/logs/
 
 # Outputs
